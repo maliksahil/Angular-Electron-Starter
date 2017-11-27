@@ -4,11 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "ng build --base-href . && tsc --p electron/tsconfig.json && electron dist/index.js --debug"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +40,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2"
+    "typescript": "~2.4.2",
+    "electron": "^1.7.8"
   }
 }
